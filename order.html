@@ -1,0 +1,41 @@
+<div id="pageOrder" data-role="page"  ng-controller="orderCtrl">
+	<div data-role="header" class="header">
+		<span><a href="index.html" >开饭啦</a></span>
+		<a href="#" class="ui-btn ui-btn-right ui-icon-bars ui-corner-all ui-btn-icon-notext">折叠菜单</a>
+	</div>
+	<div class="ui-content">
+		<div class="ui-body ui-body-a ui-corner-all" ng-hide="clicked">
+			<form action="">
+				<label for="uname"><h4>联系人:</h4></label>
+				<input ng-model="order.user_name" type="text"  id="uname" >
+
+				<fieldset data-role="controlgroup" data-type="horizontal">
+					<legend>性别:</legend>
+					<input ng-model="order.sex" type="radio" name="radio-choice-h-2" id="sex-man" value="1" checked="checked">
+					<label for="sex-man">男</label>
+					<input ng-model="order.sex" type="radio" name="radio-choice-h-2" id="sex-lady" value="2">
+					<label for="sex-lady">女</label>
+				</fieldset>
+				<label for="phone"><h4>联系电话:</h4></label>
+				<input ng-model="order.phone" type="text"  id="phone" >
+				<label for="textarea-4">送餐地址:</label>
+				<textarea ng-model="order.addr" data-mini="true" cols="40" rows="8" name="textarea-4" id="textarea-4"></textarea>
+				<button ng-click="submitOrder()" id="loadmore" type="button">确定下单</button>
+			</form>
+		</div>
+		<div ng-show="clicked" id="success" >
+			订餐成功！您的订单编号为：{{result.did}}。您可以在
+			<a  href="myorder.html">用户中心</a>
+			查看订单状态。
+		</div>
+	</div>
+	<div data-role="footer" data-position="fixed">
+		<div data-role="navbar">
+			<ul>
+				<li><a data-role="button" data-icon="home" data-iconpos="notext" href="main.html"></a></li>
+				<li><a data-role="button" data-icon="user" data-iconpos="notext" href="myorder.html"></a></li>
+				<li><a data-role="button" data-icon="bullets" data-iconpos="notext" href="#"></a></li>
+			</ul>
+		</div>
+	</div>
+</div>

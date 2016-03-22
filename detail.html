@@ -1,0 +1,42 @@
+<div id="pageDetail" data-role="page"   ng-controller="detailCtrl">
+	<div data-role="header" class="header">
+		<span><a href="index.html">开饭啦</a></span>
+		<a href="#" class="ui-btn ui-btn-right ui-icon-bars ui-corner-all ui-btn-icon-notext">折叠菜单</a>
+	</div>
+
+
+	<div class="ui-content">
+		<div id="detail-main" class="ui-corner-all custom-corners">
+			<div class="ui-bar ui-bar-a ui-corner-all">
+				<h3>
+					<a href="../app/kaifanla/index.html">首页 </a>
+					<span>/ 详情</span>
+				</h3>
+			</div>
+			<div class="ui-body ui-body-a ui-corner-all">
+				<h1>{{dish.name}}</h1>
+				<img ng-src="img/{{dish.img_lg}}" alt=""/>
+				<div>
+					<b>主要原料:</b>{{dish.material}}
+					<p>{{dish.detail}} </p>
+					<p class="price">{{dish.price}}</p>
+				</div>  
+			</div>
+			<div class="ui-bar ui-bar-a ui-corner-all">
+				<a ng-click="jump('main.html')" id="btn2" href="">我再看看</a>
+				<a ng-click="jump('order.html')" id="btn1" href="">我要订餐</a>
+			</div>
+		</div>
+	</div>
+
+
+	<div data-role="footer" data-position="fixed">
+		<div data-role="navbar">
+			<ul>
+				<li><a data-role="button" data-icon="home" data-iconpos="notext" href="main.html"></a></li>
+				<li><a data-role="button" data-icon="user" data-iconpos="notext" href="myorder.html"></a></li>
+				<li><a data-role="button" data-icon="bullets" data-iconpos="notext" href="#"></a></li>
+			</ul>
+		</div>
+	</div>
+</div>

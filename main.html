@@ -1,0 +1,57 @@
+<div id="pageMain" data-role="page"  ng-controller="mainCtrl">
+	<div data-role="header" class="header">
+		<span><a href="index.html" >开饭啦</a></span>
+		<a href="#add-form" data-icon="gear" class="ui-btn ui-btn-right ui-icon-bars ui-corner-all ui-btn-icon-notext">折叠菜单</a>
+	</div>
+	<div class="ui-content">
+		<form>
+			<label for="search" class="ui-hidden-accessible"></label>
+			<input  ng-model="kw" data-type="search" type="search" id="search" placeholder="搜索菜品名称和原料"> 
+
+			<ul data-role="listview"  data-inset="true">
+				<li ng-repeat="p in listdid">
+					<a href="detail.html" ng-click="jumpWidthData('detail.html','did',p.did)">
+						<!--<a href="#" ng-click="jumpWithData()">-->
+						<img id="img1" ng-src="img/{{p.img_sm}}" alt=""/>
+						<h2>{{p.name}}</h2>
+						<span>{{p.material}}</span>
+						<h4>{{p.price}}</h4>
+					</a>
+				</li>
+			</ul>  
+		</form>
+
+		<div data-role="popup" id="mypop" data-overlay-theme="b" data-corners="false">
+			<a href="#" data-rel="back"
+			   class="ui-btn ui-corner-all ui-shadow ui-btn-a ui-icon-delete ui-btn-icon-notext ui-btn-right">close</a>
+			<img src="img/p0281-l.jpg" alt=""/>
+		</div>
+		<button ng-click="loadMore()" ng-show="!more" id="loadmore" type="button">加载更多</button>
+		<p ng-show="more" id="alert" class="ui-btn ui-shadow ui-corner-all ui-btn-icon-left ui-icon-alert">没有更多数据了！</p>
+	</div>
+	<div data-role="panel" data-position="right" data-position-fixed="true" data-display="overlay" data-theme="a" id="add-form">
+		<form class="userform">
+			<h2>登录</h2>
+			<label for="name">用户名:</label>
+			<input type="text" name="name" id="name" value="" data-clear-btn="true" data-mini="true">
+			<label for="password">密码:</label>
+			<input type="password" name="password" id="password" value="" data-clear-btn="true" autocomplete="off" data-mini="true">
+			<div class="ui-grid-a">
+				<div class="ui-block-a"><a href="#" data-rel="close" class="ui-btn ui-shadow ui-corner-all ui-btn-a ui-mini">登录</a></div>
+				<div class="ui-block-b"><a href="#" data-rel="close" class="ui-btn ui-shadow ui-corner-all ui-btn-a ui-mini">取消</a></div>
+			</div>
+		</form>
+	</div>
+
+	<div data-role="footer" data-position="fixed">
+		<div data-role="navbar">
+			<ul>
+				<li><a data-role="button" data-icon="home" data-iconpos="notext" href="main.html"></a></li>
+				<li><a data-role="button" data-icon="user" data-iconpos="notext" href="myorder.html"></a></li>
+				<li><a data-role="button" data-icon="bullets" data-iconpos="notext" href="#"></a></li>
+			</ul>
+		</div>
+	</div>
+</div>
+
+

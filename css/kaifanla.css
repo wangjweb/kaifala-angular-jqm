@@ -1,0 +1,88 @@
+#pageStart {
+  height: 100%;
+}
+#pageStart h1 {
+  color: #3172a7;
+  font-size: 5rem;
+  font-weight: bold;
+  text-align: center;
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  margin-top: -2.5rem;
+  line-height: 1rem;
+}
+#pageStart img {
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  margin-top: 2.5rem;
+  line-height: 1rem;
+}
+#pageStart a img {
+  width: 100%;
+}
+.header {
+  padding: 6px 5px ;
+}
+#pageMain div span a,
+#pageDetail div span a,
+#pageOrder div span a,
+#pageMyorder div span a {
+  font-weight: bold;
+  font-size: 1.4em ;
+  text-decoration: none;
+}
+#pageMain .ui-content ul li a img {
+  margin: 30px 0 0 10px;
+}
+#pageMain .ui-content ul li h4 {
+  color: #f00;
+}
+/*alert��ť*/
+.ui-page-theme-a #alert.ui-btn {
+  background-color: #ebccd1;
+}
+.ui-page-theme-a #loadmore.ui-btn {
+  background-color: #59b75e;
+  color: #ffffff;
+  font-weight: normal;
+  font-family: "Microsoft Yahei";
+  font-size: 1em;
+}
+.ui-page-theme-a #loadmore.ui-btn:hover {
+  font-weight: normal;
+  box-shadow: 0 0 10px 0 #59b75e;
+}
+/*detailҳ��*/
+#detail-main div h3 a {
+  text-decoration: none;
+}
+#pageDetail div.ui-body.ui-body-a img {
+  width: 100%;
+}
+#detail-main div.ui-body.ui-body-a.ui-corner-all div {
+  padding: 15px 10px 0 10px ;
+  margin-top: -5px;
+  border: 1px solid #E7E7E7;
+  background-color: #F6F6F6;
+}
+#detail-main .ui-body div .price {
+  color: red;
+  font-weight: bold;
+}
+#detail-main #btn1 {
+  background-color: #62B067 ;
+  float: right;
+  color: #ffffff;
+  margin-right: 10px;
+}
+#detail-main #btn2 {
+  background-color: #E4AF46 ;
+  float: right;
+  color: #ffffff;
+}
+#pageOrder #success {
+  background-color: #E1F3DB;
+  padding: 15px;
+}

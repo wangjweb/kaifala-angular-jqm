@@ -1,0 +1,42 @@
+<div id="pageMyorder" data-role="page"  ng-controller="myorderCtrl">
+	<div data-role="header" class="header">
+		<span><a href="index.html" >开饭啦</a></span>
+		<a href="#" data-column-popup-theme="a" class="ui-btn ui-btn-right ui-icon-bars ui-corner-all ui-btn-icon-notext">折叠菜单</a>
+	</div>
+	<div class="ui-content">
+		<h1>我的订单</h1>
+		<table data-role="table" id="table" data-mode="columntoggle" class="ui-body-d ui-shadow ui-responsive table-stroke">
+			<thead>
+			<tr>
+				<th data-priority="1">编号</th>
+				<th >菜品</th>
+				<th data-priority="1">下单时间</th>
+				<th >联系人</th>
+				<th data-priority="1">操作</th>
+			</tr>
+			</thead>
+			<tbody ng-repeat="m in listphone ">
+			<tr>
+				<td>{{m.oid}}</td>
+				<td><img ng-src="img/{{m.img_sm}}" alt=""/></td>
+				<td>{{m.order_time | date:'yyyy年MM月dd日 HH时mm分ss秒'}}</td>
+				<td>{{m.user_name}}</td>
+				<td>
+					<button ng-click="delete(m.oid)" type="button">删除</button>
+				</td>
+			</tr>
+			</tbody>
+		</table>
+
+
+	</div>
+	<div data-role="footer" data-position="fixed">
+		<div data-role="navbar">
+			<ul>
+				<li><a data-role="button" data-icon="home" data-iconpos="notext" href="main.html"></a></li>
+				<li><a data-role="button" data-icon="user" data-iconpos="notext" href="#"></a></li>
+				<li><a data-role="button" data-icon="bullets" data-iconpos="notext" href="#"></a></li>
+			</ul>
+		</div>
+	</div>
+</div>
